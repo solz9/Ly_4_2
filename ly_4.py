@@ -8,33 +8,34 @@ if st.button('Enter'):
     x = st.text_input('Nhập Password')
     df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
     df1 = df[df['Họ và tên'] == y]
-    if df1['Password'] == x:
-          if st.button('Kết quả'):
-                Names = df1['Họ và tên']
-                HS1 = df1['HS1']
-                BTDDS = df1['BT01 Đúng/Sai']
-                BTMM = df1['BT02 Moment']
-                Bonus = df1['Điểm cộng']
-                KTGK = df1['Điểm KTGK']
-                KTCK = df1['Điểm KTCK']
-                a = np.array([Names, HS1, BTDDS, BTMM, Bonus, KTGK, KTCK])
-                df1 = pd.DataFrame(
-                    {
-                        "Họ và tên": a[0],
-                        "HS1": a[1],
-                        'BT01 Đúng/Sai': a[2],
-                        'BT02 Moment': a[3],
-                        'Điểm cộng': a[4],
-                        'Điểm KTGK': a[5],
-                        'Điểm KTCK': a[6]
-                    }
-                )
-                hide_dataframe_row_index = """
-                        <style>
-                        .row_heading.level0 {display:none}
-                        .blank {display:none}
-                        </style>
-                        """
+    if st.button('Enter'):
+        while df1['Password'] != x:
+            st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
+        Names = df1['Họ và tên']
+        HS1 = df1['HS1']
+        BTDDS = df1['BT01 Đúng/Sai']
+        BTMM = df1['BT02 Moment']
+        Bonus = df1['Điểm cộng']
+        KTGK = df1['Điểm KTGK']
+        KTCK = df1['Điểm KTCK']
+        a = np.array([Names, HS1, BTDDS, BTMM, Bonus, KTGK, KTCK])
+        df1 = pd.DataFrame(
+            {
+                "Họ và tên": a[0],
+                "HS1": a[1],
+                'BT01 Đúng/Sai': a[2],
+                'BT02 Moment': a[3],
+                'Điểm cộng': a[4],
+                'Điểm KTGK': a[5],
+                'Điểm KTCK': a[6]
+            }
+        )
+        hide_dataframe_row_index = """
+        <style>
+        .row_heading.level0 {display:none}
+        .blank {display:none}
+        </style>
+        """
 
     # Inject CSS with Markdown
     st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
