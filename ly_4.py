@@ -18,7 +18,7 @@ if st.button('Xem kết quả'):
                 'BT01 Đúng/Sai': df1['BT01 Đúng/Sai'],
                 'BT02 Moment': df1['BT02 Moment'],
                 'Điểm cộng': df1['Điểm cộng'],
-                'Điểm KTGK': df1['Điểm cộng'],
+                'Điểm KTGK': df1['Điểm KTGK'],
                 'Điểm KTCK':  df1['Điểm KTCK']
             }
         )
