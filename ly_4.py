@@ -9,7 +9,7 @@ if st.button('Xem kết quả'):
     df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
     df1 = df[df['Họ và tên'] == y]
     if df1['Password'].values != x:
-        st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
+        st.warning('Bạn đã nhập sai mật khẩu hoặc họ và tên, vui lòng nhập lại')
     else:
         df1 = pd.DataFrame(
             {
