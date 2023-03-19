@@ -11,14 +11,6 @@ if st.button('Enter'):
     if df1['Password'].values != x:
         st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
     else:
-#         Names = 
-#         HS1 = 
-#         BTDDS = 
-#         BTMM = 
-#         Bonus = 
-#         KTGK = 
-#         KTCK = 
-#         a = np.array([Names, HS1, BTDDS, BTMM, Bonus, KTGK, KTCK])
         df1 = pd.DataFrame(
             {
                 "Họ và tên": df1['Họ và tên'],
