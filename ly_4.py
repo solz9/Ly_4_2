@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
 x = st.text_input('Nhập Password')
-if st.button('Nhập Password'):
+if st.button('Enter'):
     df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
     if df[df['Password']] == x:
           y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
