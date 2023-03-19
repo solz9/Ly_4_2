@@ -37,8 +37,8 @@ if st.button('Enter'):
         </style>
         """
 
-    # Inject CSS with Markdown
-    st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
+        # Inject CSS with Markdown
+        st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
 
-    # Display an interactive table
-    st.table(df1)
+        # Display an interactive table
+        st.table(df1)
