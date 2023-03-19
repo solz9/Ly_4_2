@@ -3,13 +3,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
-x = st.text_input('Nhập Password')
+y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
 if st.button('Enter'):
+    x = st.text_input('Nhập Password')
     df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
-    if df[df['Password'] == x]:
-          y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
+    df1 = df[df['Họ và tên'] == y]
+    if df1['Password'] == x:
           if st.button('Kết quả'):
-                df1 = df[df['Họ và tên'] == y]
                 Names = df1['Họ và tên']
                 HS1 = df1['HS1']
                 BTDDS = df1['BT01 Đúng/Sai']
