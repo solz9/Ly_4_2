@@ -19,7 +19,8 @@ if st.button('Enter'):
                 'BT02 Moment': df1['BT02 Moment'],
                 'Điểm cộng': df1['Điểm cộng'],
                 'Điểm KTGK': df1['Điểm KTGK'],
-                'Điểm KTCK': df1['Điểm KTCK']
+                'Điểm KTCK': df1['Điểm KTCK'],
+                'Điểm KTTX': df1['KTTX']
             }
         )
         hide_dataframe_row_index = """
