@@ -11,7 +11,7 @@ if st.button('Enter'):
     if df1['Password'].values != x:
         st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
     else:
-        if df[df['Họ và tên'] == Nguyễn Lục Hoàng Minh]:
+        if df[df['Họ và tên'] == 'Nguyễn Lục Hoàng Minh']:
             df2 = pd.DataFrame(
                 {
                     "Họ và tên": df['Họ và tên'],
