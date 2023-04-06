@@ -21,7 +21,6 @@ if st.button('Enter'):
                     'Điểm cộng': df['Điểm cộng'],
                     'Điểm KTGK': df['Điểm KTGK'],
                     'Điểm KTCK': df['Điểm KTCK'],
-                    'Điểm KTTX': df['KTTX']
                 }
             )
             hide_dataframe_row_index = """
@@ -42,7 +41,6 @@ if st.button('Enter'):
                     'Điểm cộng': df1['Điểm cộng'],
                     'Điểm KTGK': df1['Điểm KTGK'],
                     'Điểm KTCK': df1['Điểm KTCK'],
-                    'Điểm KTTX': df1['KTTX']
                 }
             )
             hide_dataframe_row_index = """
