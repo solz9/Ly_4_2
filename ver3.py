@@ -7,7 +7,7 @@ option = st.selectbox('Bạn là?', ('Học sinh', 'Giáo viên'))
 df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
 dfs = pd.read_excel('passgv.xlsx')
 if option == 'Giáo viên':
-    x = st.number_input('Nhập Password')
+    x = st.text_input("Nhập mật khẩu", type="password")
     if st.button('Enter'):
         if dfs['Password'].values != x:
             st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
@@ -57,7 +57,7 @@ if option == 'Giáo viên':
 #             st.table(df2)
 else:
     y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
-    x = st.number_input('Nhập Password')
+    x = st.text_input("Nhập mật khẩu", type="password")
     df1 = df[df['Họ và tên'] == y]
     if df1['Password'].values != x:
         st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
