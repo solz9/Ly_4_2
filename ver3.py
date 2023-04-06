@@ -31,30 +31,6 @@ if option == 'Giáo viên':
             """
             st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
             st.table(df2)
-# if st.button('Enter'):
-#     if option == 'Giáo viên':
-#         if dfs['Password'].values != x:
-#             st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
-#         else:
-#             df2 = pd.DataFrame(
-#                 {
-#                     "Họ và tên": df['Họ và tên'],
-#                     "HS1": df['HS1'],
-#                     'BT01 Đúng/Sai': df['BT01 Đúng/Sai'],
-#                     'BT02 Moment': df['BT02 Moment'],
-#                     'Điểm cộng': df['Điểm cộng'],
-#                     'Điểm KTGK': df['Điểm KTGK'],
-#                     'Điểm KTCK': df['Điểm KTCK'],
-#                 }
-#             )
-#             hide_dataframe_row_index = """
-#             <style>
-#             .row_heading.level0 {display:none}
-#             .blank {display:none}
-#             </style>
-#             """
-#             st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
-#             st.table(df2)
 else:
     y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
     x = st.text_input("Nhập mật khẩu", type="password")
