@@ -9,7 +9,7 @@ dfs = pd.read_excel('passgv.xlsx')
 if option == 'Giáo viên':
     x = st.text_input("Nhập mật khẩu", type="password")
     if st.button('Enter'):
-        if int(dfs['Password']) != x or dfs['Password'].values != x:
+        if dfs['Password'].values != x:
             st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
         else:
             df2 = pd.DataFrame(
