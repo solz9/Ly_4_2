@@ -3,9 +3,10 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 st.title('KẾT QUẢ HỌC TẬP LỚP LÝ 4')
-y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
-x = st.number_input('Nhập Password')
+option = st.selectbox('Bạn là?', ('Học sinh', 'Giáo viên'))
 if st.button('Enter'):
+    y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
+    x = st.number_input('Nhập Password')
     df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
     dfs = pd.read_excel('passgv.xlsx')
     df1 = df[df['Họ và tên'] == y]
@@ -13,7 +14,7 @@ if st.button('Enter'):
     if df1['Password'].values != x or df1_2['Password'].values != x:
         st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
     else:
-        if y == 'Nguyễn Lục Hoàng Minh':
+        if option == 'Giáo viên':
             df2 = pd.DataFrame(
                 {
                     "Họ và tên": df['Họ và tên'],
@@ -52,8 +53,8 @@ if st.button('Enter'):
             </style>
             """
 
-            # Inject CSS with Markdown
+                # Inject CSS with Markdown
             st.markdown(hide_dataframe_row_index, unsafe_allow_html=True)
 
-            # Display an interactive table
+                # Display an interactive table
             st.table(df1)
