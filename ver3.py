@@ -7,8 +7,10 @@ y = st.text_input('Nhập họ và tên (Lưu ý: ghi hoa chữ cái đầu)')
 x = st.number_input('Nhập Password')
 if st.button('Enter'):
     df = pd.read_excel('DS_10Ly4 - Copy.xlsx')
+    dfs = pd.read_excel('passgv.xlsx')
     df1 = df[df['Họ và tên'] == y]
-    if df1['Password'].values != x:
+    df1_2 = dfs[dfs['Họ và tên'] == y]  
+    if df1['Password'].values != x or df1_2['Password'].values != x:
         st.warning('Bạn đã nhập sai Password hoặc họ và tên, vui lòng nhập lại')
     else:
         if y == 'Nguyễn Lục Hoàng Minh':
